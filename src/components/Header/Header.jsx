@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <img src="https://example.com/logo.png" alt="AcquaPet Store Logo" />
+          <img src="https://my-portifolio-images.s3.us-east-2.amazonaws.com/logo_header.png" alt="AcquaPet Store Logo" />
           <h1>AcquaPet Store</h1>
         </div>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

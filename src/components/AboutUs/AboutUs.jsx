@@ -9,7 +9,7 @@ const AboutUs = () => {
         <h2>Sobre Nós</h2>
         <div className="content">
           <div className="image">
-            <img src="https://example.com/nossa-loja.jpg" alt="Nossa Loja" />
+            <img src="https://my-portifolio-images.s3.us-east-2.amazonaws.com/sacada.png" alt="Nossa Loja" />
           </div>
           <div className="text">
             <p>
