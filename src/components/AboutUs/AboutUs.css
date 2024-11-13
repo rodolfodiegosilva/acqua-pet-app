@@ -46,6 +46,7 @@
 @media (max-width: 768px) {
   .about-us .content {
     flex-direction: column;
+    margin: 10px;
   }
 
   .about-us .text p {

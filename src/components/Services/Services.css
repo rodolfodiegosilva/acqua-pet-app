@@ -39,6 +39,50 @@
   font-size: 1em;
 }
 
+
+.service-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Estilos para o modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close-button {
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c72c3b;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .services h2 {
