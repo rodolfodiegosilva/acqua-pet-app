@@ -1,3 +1,4 @@
+// src/components/Header/Header.jsx
 import React, { useState } from 'react';
 import './Header.css';
 
@@ -7,7 +8,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <h1>AcquaPet Store</h1>
+        <div className="logo">
+          <img src="https://example.com/logo.png" alt="AcquaPet Store Logo" />
+          <h1>AcquaPet Store</h1>
+        </div>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
