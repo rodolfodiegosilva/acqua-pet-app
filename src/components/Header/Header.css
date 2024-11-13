@@ -1,7 +1,9 @@
+/* src/components/Header/Header.css */
+
 .header {
   background-color: #1a1a66;
   color: #ffffff;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .header .container {
@@ -10,8 +12,19 @@
   justify-content: space-between;
 }
 
-.header h1 {
-  font-size: 2em;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
+  font-size: 1.8em;
 }
 
 .header nav ul {
@@ -47,6 +60,7 @@
   .header nav {
     display: none;
     width: 100%;
+    background-color: #1a1a66;
   }
 
   .header nav.open {
@@ -56,6 +70,7 @@
   .header nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
   .header .container {

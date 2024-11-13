@@ -1,6 +1,8 @@
+/* src/components/Testimonials/Testimonials.css */
+
 .testimonials {
   padding: 60px 0;
-  background-color: #ffffff;
+  background-color: #f0f4f8;
 }
 
 .testimonials .container {
@@ -12,17 +14,14 @@
   margin-bottom: 40px;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
+/* Ajustes para o carrossel */
 .testimonial-item {
-  background-color: #f0f4f8;
+  background-color: #ffffff;
   padding: 30px;
   border-left: 5px solid #e63946;
   border-radius: 8px;
+  margin: 0 20px;
+  min-height: 200px;
 }
 
 .testimonial-item blockquote {
@@ -37,14 +36,19 @@
   color: #333333;
 }
 
+/* Estilos para os pontos do carrossel */
+.slick-dots li button:before {
+  color: #1a1a66;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e63946;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .testimonials h2 {
     font-size: 2em;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
   }
 
   .testimonial-item {

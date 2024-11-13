@@ -1,16 +1,24 @@
+/* src/components/ContactUs/ContactUs.css */
+
 .contact-us {
   padding: 60px 0;
 }
 
 .contact-us .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .contact-us h2 {
   text-align: center;
   font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  text-align: center;
+  font-size: 1.2em;
   margin-bottom: 40px;
 }
 
@@ -19,7 +27,16 @@
   flex-direction: column;
 }
 
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -43,8 +60,9 @@
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 10px;
   transition: background-color 0.3s;
+  align-self: center;
+  width: 200px;
 }
 
 .contact-us button:hover {
@@ -53,12 +71,11 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .contact-us h2 {
-    font-size: 2em;
+  .form-row {
+    flex-direction: column;
   }
 
   .contact-us button {
-    padding: 12px;
-    font-size: 0.9em;
+    width: 100%;
   }
 }
