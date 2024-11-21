@@ -26,7 +26,7 @@ const ContactUs = () => {
           alert("Ocorreu um erro ao enviar a mensagem, tente novamente.");
         }
       );
-      
+
     e.target.reset(); // limpa o formulário após o envio
   };
 

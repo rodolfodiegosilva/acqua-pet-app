@@ -63,7 +63,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="testimonials">
-      <div className="container">
+      <div className="testimonials-container">
         <h2>Depoimentos</h2>
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (

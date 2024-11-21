@@ -2,16 +2,23 @@
 
 .testimonials {
   padding: 60px 0;
-  background-color: #f0f4f8;
+  background-color: #1a1a66;
 }
 
-.testimonials .container {
+.testimonials-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials .testimonials-container {
   text-align: center;
 }
 
 .testimonials h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
+  color: #ffffff;
 }
 
 /* Ajustes para o carrossel */
@@ -20,7 +27,8 @@
   padding: 30px;
   border-left: 5px solid #e63946;
   border-radius: 8px;
-  margin: 10px; /* Ajuste de margem para espaçamento entre os itens */
+  margin: 10px;
+  /* Ajuste de margem para espaçamento entre os itens */
   min-height: 200px;
 }
 
@@ -46,7 +54,8 @@
 }
 
 /* Remover setas de navegação padrão do slick */
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   display: none !important;
 }
 
