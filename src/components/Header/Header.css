@@ -4,6 +4,9 @@
   background-color: #1a1a66;
   color: #ffffff;
   padding: 10px 0;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 .header .container {
@@ -20,35 +23,80 @@
 
 .logo img {
   width: 100px;
-  height: 50px;
+  height: auto;
 }
 
 .logo h1 {
   font-size: 1.8em;
 }
 
-.header nav ul {
+.nav {
+  display: flex;
+}
+
+.nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.header nav a {
+.nav a {
   color: #ffffff;
   font-weight: bold;
 }
 
-.header nav a:hover {
+.nav a:hover {
   color: #e63946;
 }
 
+/* Botão de menu "hambúrguer" */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
-  font-size: 2em;
   cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: '';
+  background-color: #ffffff;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle .hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle .hamburger::before {
+  top: -10px;
+}
+
+.menu-toggle .hamburger::after {
+  bottom: -10px;
+}
+
+.menu-toggle.open .hamburger {
+  background-color: transparent;
+}
+
+.menu-toggle.open .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.open .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 0;
 }
 
 /* Responsividade */
@@ -57,24 +105,28 @@
     display: block;
   }
 
-  .header nav {
-    display: none;
-    width: 100%;
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     background-color: #1a1a66;
-  }
-
-  .header nav.open {
-    display: block;
-  }
-
-  .header nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
   }
 
   .header .container {
-    flex-direction: row;
     justify-content: space-between;
   }
 }

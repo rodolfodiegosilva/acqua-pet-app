@@ -65,7 +65,7 @@ const FishGallery = () => {
 
   return (
     <section id="fish" className="fish-gallery">
-      <div className="container">
+      <div className="fish-container">
         <h2>Peixes Ornamentais</h2>
         <p>Conheça nossa seleção especial de peixes ornamentais.</p>
         <div className="gallery-grid">
@@ -74,6 +74,10 @@ const FishGallery = () => {
               className="fish-item"
               key={index}
               onClick={() => openModal(fish)}
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => { if (e.key === 'Enter') openModal(fish); }}
+              aria-label={`Mais informações sobre ${fish.name}`}
             >
               <img src={fish.images[0]} alt={fish.name} />
               <h3>{fish.name}</h3>
@@ -93,7 +97,7 @@ const FishGallery = () => {
                 slidesToScroll={1}
               >
                 {selectedFish.images.map((image, idx) => (
-                  <img key={idx} src={image} alt={`${selectedFish.name} ${idx + 1}`} />
+                  <img key={idx} src={image} alt={`${selectedFish.name} imagem ${idx + 1}`} />
                 ))}
               </Slider>
               <p>{selectedFish.description}</p>

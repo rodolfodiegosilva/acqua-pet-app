@@ -4,7 +4,6 @@ import './HeroSection.css';
 
 const HeroSection = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  
 
   const videos = [
     'https://my-portifolio-images.s3.us-east-2.amazonaws.com/video_hero_background.mp4',
@@ -29,6 +28,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          poster="https://my-portifolio-images.s3.us-east-2.amazonaws.com/fallback_image.jpg"
         />
       </div>
       <div className="hero-container">

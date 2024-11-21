@@ -3,7 +3,20 @@
   background-color: #f0f4f8;
 }
 
-.fish-gallery .container {
+.fish-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.fish-container h2{
+  color: #1a1a66;
+}
+.modal-content h2{
+  color: #1a1a66;
+
+}
+
+.fish-gallery .fish-container {
   text-align: center;
 }
 
@@ -27,11 +40,12 @@
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .fish-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .fish-item img {

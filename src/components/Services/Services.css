@@ -1,9 +1,25 @@
+/* src/components/Services/Services.css */
+
 .services {
   padding: 60px 0;
+  background-color: #1a1a66;
 }
 
-.services .container {
+.service-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services .service-container {
   text-align: center;
+
+}
+.service-container h2{
+  color: #ffffff;
+}
+.modal-content h2{
+  color: #1a1a66;
+
 }
 
 .services h2 {
@@ -18,11 +34,17 @@
 }
 
 .service-item {
-  background-color: #1a1a66;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1a1a66;
   padding: 30px;
   text-align: center;
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-item span {
@@ -39,11 +61,11 @@
   font-size: 1em;
 }
 
-
 .service-item {
   cursor: pointer;
   user-select: none;
 }
+
 
 /* Estilos para o modal */
 .modal-overlay {
@@ -82,7 +104,6 @@
 .close-button:hover {
   background-color: #c72c3b;
 }
-
 /* Responsividade */
 @media (max-width: 768px) {
   .services h2 {
